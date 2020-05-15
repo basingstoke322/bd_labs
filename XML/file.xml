@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+        <!ELEMENT root (clients)+>
+        <!ELEMENT clients (client)+>
+        <!ELEMENT client (name,account,country)+>
+        <!ATTLIST client clientCode CDATA #REQUIRED>
+        <!ELEMENT name (#PCDATA)>
+        <!ELEMENT country (#PCDATA)>
+        <!ELEMENT account (balance,limit)>
+        <!ELEMENT balance (#PCDATA)>
+        <!ELEMENT limit (#PCDATA)>
+        ]>
+<root>
+    <clients>
+        <client clientCode="1">
+            <name>Сергей</name>
+            <country>Russia</country>
+            <account>
+                <balance>566777</balance>
+                <limit>1000</limit>
+            </account>
+        </client>
+        <client clientCode="2">
+            <name>Дмитрий</name>
+            <country>Russia</country>
+            <account>
+                <balance>45678</balance>
+                <limit>100000</limit>
+            </account>
+        </client>
+        <client clientCode="3">
+            <name>Павел</name>
+            <country>England</country>
+            <account>
+                <balance>67868</balance>
+                <limit>10000</limit>
+            </account>
+        </client>
+    </clients>
+</root>
